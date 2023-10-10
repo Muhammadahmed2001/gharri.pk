@@ -1,0 +1,28 @@
+.back {
+    display: none;
+    position: absolute;
+    
+    
+    
+    
+}
+.card:hover .back {
+    display: block;
+    
+   
+    
+  
+  
+  
+}
+.price{
+    opacity: 0.8;
+}
+
+.navbar{
+
+    box-shadow: 0px 15px 10px -15px #aca7a7; 
+}
+.container{
+    margin-top: 20px;
+}
