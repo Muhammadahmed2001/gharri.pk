@@ -1,11 +1,12 @@
 .back {
     display: none;
     position: absolute;
-    
-    
-    
-    
+    /* height: 75%; */
+    /* z-index: 9999; */
 }
+/* .card-img-top{
+    height: 68%;
+} */
 .card:hover .back {
     display: block;
     
@@ -26,3 +27,6 @@
 .container{
     margin-top: 20px;
 }
+/* .card{
+    height: 450px !important;
+} */
