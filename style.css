@@ -4,9 +4,10 @@
     /* height: 75%; */
     /* z-index: 9999; */
 }
-/* .card-img-top{
-    height: 68%;
-} */
+.card-img-top{
+   object-fit: cover !important;
+   height: 350px;
+}
 .card:hover .back {
     display: block;
     

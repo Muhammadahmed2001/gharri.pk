@@ -47,7 +47,72 @@ var gharriStore = {
                 price: "Rs.21,233 PKR",
                 frontImg: "./img/i6-f.jpg",
                 backImg: "./img/i6-b.jpg"
-            }
+            },
+            AX2101 : {
+                name: "Armani Exchange Men’s",
+                description: "Leather Band 46mm Watch",
+                price: "Rs.6,000 PKR",
+                frontImg: "./img/i7-f.jpg",
+                backImg: "./img/i7-b.jpg"
+            },
+            AX2100 : {
+                name: "Armani Exchange Men’s",
+                description: "Silicone Strap White Dial 47mm",
+                price: "Rs.7,200 PKR",
+                frontImg: "./img/i8-f.jpg",
+                backImg: "./img/i8-b.jpg"
+            },
+            AX2134 : {
+                name: "Armani Exchange Men’s",
+                description: "Leather Band White Dial 46mm",
+                price: "Rs.5,800 PKR",
+                frontImg: "./img/i9-f.jpg",
+                backImg: "./img/i9-b.jpg"
+            },
+            AX2133 : {
+                name: "Armani Exchange Men’s",
+                description: "Quartz Brown Leather Strap Blue Dial 46mm",
+                price: "Rs.8,200 PKR",
+                frontImg: "./img/i10-f.jpg",
+                backImg: "./img/i10-b.jpg"
+            },
+        },
+        calvinKlein : {
+            K3M211C3 : {
+                name: "Calvin Klein Men’s",
+                description: "Swiss Made Quartz Black Leather Strap Grey Dial 40mm",
+                price: "Rs.30,000 PKR",
+                frontImg: "./img/i11-f.jpg",
+                backImg: "./img/i11-b.jpg"
+            },
+            K9N111VN : {
+                name: "Calvin Klein Men’s",
+                description: "Quartz Leather Strap Blue Dial 39mm",
+                price: "Rs.23,000 PKR",
+                frontImg: "./img/i12-f.jpg",
+                backImg: "./img/i12-b.jpg"
+            },
+            K2Y231C3 : {
+                name: "Calvin Klein Women’s",
+                description: "Swiss Made Quartz Black Leather Strap Black Dial 32mm",
+                price: "Rs.32,000 PKR",
+                frontImg: "./img/i13-f.jpg",
+                backImg: "./img/i13-b.jpg"
+            },
+            K3M211C3 : {
+                name: "Calvin Klein Men’s",
+                description: "Swiss Made Quartz Black Leather Strap Grey Dial 40mm",
+                price: "Rs.30,000 PKR",
+                frontImg: "./img/i11-f.jpg",
+                backImg: "./img/i11-b.jpg"
+            },
+            K3M211C3 : {
+                name: "Calvin Klein Men’s",
+                description: "Swiss Made Quartz Black Leather Strap Grey Dial 40mm",
+                price: "Rs.30,000 PKR",
+                frontImg: "./img/i11-f.jpg",
+                backImg: "./img/i11-b.jpg"
+            },
         }
     }
 }
