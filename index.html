@@ -30,6 +30,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
           <div class="d-flex" role="search">
+            <button onclick="clearFilter()" class="btn clear-btn me-2">Clear Filter</button>
             <select
               onchange="selectCompany()"
               id="company"
@@ -41,7 +42,7 @@
               class="form-select me-2"
               aria-label="Default select example "
             ></select>
-            <button onclick="filterWatch()" class="btn">Search</button>
+            <button onclick="filterWatch()" class="btn me-2">Search</button>
           </div>
         </div>
       </div>
@@ -49,18 +50,7 @@
 
     <div class="container">
       <div id="main" class="row row-cols-1 row-cols-md-4 g-4">
-        <!-- <div class="col">
-          <div class="card">
-            <img src="./img/i3-f.jpg" class="card-img-top" alt="..." />
-            <img src="./img/i3-b.webp" class="card-img-top back" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">TOMI FaceGear</h5>
-              <p class="card-text">Original Tomi FaceGear Series</p>
-              <h6 class="price">Rs.3,500.00 PKR</h6>
-            </div>
-          </div>
-        </div> -->
-        <!-- <img src="./img/i22-b.png" alt=""> -->
+
       </div>
     </div>
 

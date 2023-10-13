@@ -41,7 +41,7 @@ var gharriStore = {
     },
     armani: {
       AR1978: {
-        name: "Emporio Armani Men’s Analogue",
+        name: "Armani Men’s Analogue",
         description: "Leather Strap Blue Dial 43mm",
         price: "Rs.21,233 PKR",
         frontImg: "./img/i6-f.jpg",
@@ -63,7 +63,7 @@ var gharriStore = {
       },
       AX2134: {
         name: "Armani Exchange Men’s",
-        description: "Leather Band White Dial 46mm",
+        description: "Armani Exchange Men’s Leather Band White Dial 46mm",
         price: "Rs.5,800 PKR",
         frontImg: "./img/i9-f.jpg",
         backImg: "./img/i9-b.jpg",
@@ -142,10 +142,7 @@ var gharriStore = {
         frontImg: "./img/i20-f.jpg",
         backImg: "./img/i20-b.jpg",
       },
-    },
-  },
-  chain: {
-    diesel: {
+    }, diesel: {
       DZ4324: {
         name: "Diesel Men’s",
         description: "Chronograph Quartz Stainless Steel Black",
@@ -170,7 +167,7 @@ var gharriStore = {
       DZ7333: {
         name: "Diesel Men’s",
         description:
-          "Quartz Gold Stainless Steel Black Dial 57mm (Four Time zone)",
+          "Black Dial 57mm (Four Time zone)",
         price: "Rs.36,000 PKR",
         frontImg: "./img/i24-f.webp",
         backImg: "./img/i24-b.png",
@@ -185,7 +182,6 @@ var gharriStore = {
     },
   },
 };
-
 for (var category in gharriStore) {
   for (var brand in gharriStore[category]) {
     for (item in gharriStore[category][brand]) {
@@ -197,6 +193,7 @@ for (var category in gharriStore) {
               <div class="card-body">
                 <h5 class="card-title">${gharriStore[category][brand][item].name}</h5>
                 <p class="card-text">${gharriStore[category][brand][item].description}</p>
+                <b><p class="card-text">Watch: ${item}</p></b>
                 <h6 class="price">${gharriStore[category][brand][item].price}</h6>
               </div>
             </div>
@@ -206,6 +203,7 @@ for (var category in gharriStore) {
   }
 }
 
+
 var company = document.getElementById("company");
 var brand = document.getElementById("brand");
 company.innerHTML = `<option>Select Company</option>`;
@@ -214,8 +212,8 @@ brand.innerHTML = `<option>Select Watch Code</option>`;
 for (var category in gharriStore) {
   for (var companyName in gharriStore[category]) {
     company.innerHTML += `
-        <option value="${companyName}">${companyName.toUpperCase()}</option>
-        `;
+    <option value="${companyName}">${companyName.toUpperCase()}</option>
+    `;
   }
 }
 
@@ -229,10 +227,71 @@ function selectCompany() {
     `;
   }
 }
-
 function filterWatch() {
-  console.log(company.value, brand.value);
+  
+  main.innerHTML = ""
   for (var category in gharriStore) {
-    console.log(gharriStore[category][company.value][brand.value]);
+    main.innerHTML = `
+    <div class="col selected-card">
+    <div class="card">
+    <img src="${gharriStore[category][company.value][brand.value].frontImg}" class="card-img-top selected-card" alt="..." />
+    <img src="${gharriStore[category][company.value][brand.value].backImg}" class="card-img-top back selected-card" alt="..." />
+      <div class="card-body">
+      <h5 class="card-title">${gharriStore[category][company.value][brand.value].name}</h5>
+      <p class="card-text">${gharriStore[category][company.value][brand.value].description}</p>
+      <b><p class="card-text">Watch: ${brand.value}</p></b>
+      <h6 class="price">${gharriStore[category][company.value][brand.value].price}</h6>
+      </div>
+      </div>
+      </div>
+      `
+
+      company.innerHTML = `<option>Select Company</option>`;
+      brand.innerHTML = `<option>Select Watch Code</option>`;
+      for (var category in gharriStore) {
+        for (var companyName in gharriStore[category]) {
+          company.innerHTML += `
+          <option value="${companyName}">${companyName.toUpperCase()}</option>
+          `;
+        }
+      }
+      
+      function selectCompany() {
+        brand.innerHTML = "";
+        brand.innerHTML = `<option>Select Watch Code</option>`;
+        for (var category in gharriStore) {
+          for (var itemCode in gharriStore[category][company.value])
+            brand.innerHTML += `
+          <option value="${itemCode}">${itemCode}</option>
+          `;
+        }
+      }
   }
+}
+
+function clearFilter() {
+  selectCompany()
+  main.innerHTML = ""
+  for (var category in gharriStore) {
+    for (var brand in gharriStore[category]) {
+      for (item in gharriStore[category][brand]) {
+
+        main.innerHTML += `
+                  <div class="col">
+                  <div class="card">
+                  <img src="${gharriStore[category][brand][item].frontImg}" class="card-img-top" alt="..." />
+                    <img src="${gharriStore[category][brand][item].backImg}" class="card-img-top back" alt="..." />
+                    <div class="card-body">
+                      <h5 class="card-title">${gharriStore[category][brand][item].name}</h5>
+                      <p class="card-text">${gharriStore[category][brand][item].description}</p>
+                      <b><p class="card-text">Watch: ${item}</p></b>
+                      <h6 class="price">${gharriStore[category][brand][item].price}</h6>
+                    </div>
+                  </div>
+                </div>
+                  `;
+      }
+    }
+  }
+
 }

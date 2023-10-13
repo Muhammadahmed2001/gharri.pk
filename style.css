@@ -26,3 +26,7 @@
 .form-select {
   width: 200px !important;
 }
+.clear-btn{
+  background-color: #b1221d !important;
+  color: aliceblue !important;
+}
